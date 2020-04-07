@@ -1,0 +1,315 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee     http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+<!--  统一编码格式-->
+  <filter>
+    <filter-name>SetEncoding</filter-name>
+    <filter-class>top.newsWeb.web.filter.SetEncoding</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>SetEncoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>checkCodeServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.CheckCodeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>checkCodeServlet</servlet-name>
+    <url-pattern>/checkCodeServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>userRegisterServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.UserRegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>userRegisterServlet</servlet-name>
+    <url-pattern>/userRegisterServlet</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+        <servlet-name>userLoginServlet</servlet-name>
+        <servlet-class>top.newsWeb.web.servlet.UserLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userLoginServlet</servlet-name>
+        <url-pattern>/userLoginServlet</url-pattern>
+    </servlet-mapping>
+
+  <servlet>
+    <servlet-name>userActivateServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.UserActivateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>userActivateServlet</servlet-name>
+    <url-pattern>/userActivateServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>userExitServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.UserExitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>userExitServlet</servlet-name>
+    <url-pattern>/userExitServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>setHeadPortraitServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.SetHeadPortraitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>setHeadPortraitServlet</servlet-name>
+    <url-pattern>/setHeadPortraitServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>getUserPersonalCenterServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.GetUserPersonalCenterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getUserPersonalCenterServlet</servlet-name>
+    <url-pattern>/getUserPersonalCenterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>updatePersonalDataServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.UpdatePersonalDataServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updatePersonalDataServlet</servlet-name>
+    <url-pattern>/updatePersonalDataServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>showPersonalDataServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.ShowPersonalDataServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>showPersonalDataServlet</servlet-name>
+    <url-pattern>/showPersonalDataServlet</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>updateUserPasswordServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.UpdateUserPasswordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateUserPasswordServlet</servlet-name>
+    <url-pattern>/updateUserPasswordServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>userConfirmPasswordServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.UserConfirmPasswordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>userConfirmPasswordServlet</servlet-name>
+    <url-pattern>/userConfirmPasswordServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>checkNameServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.CheckNameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>checkNameServlet</servlet-name>
+    <url-pattern>/checkNameServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>findUserPageServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.FindUserPageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findUserPageServlet</servlet-name>
+    <url-pattern>/findUserPageServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>findNewsContentServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.FindNewsContentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findNewsContentServlet</servlet-name>
+  <url-pattern>/findNewsContentServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>addNewsServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.AddNewsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addNewsServlet</servlet-name>
+  <url-pattern>/addNewsServlet</url-pattern>
+</servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>findNewsContent</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.FindNewsContent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findNewsContent</servlet-name>
+  <url-pattern>/findNewsContent</url-pattern>
+</servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>deleteNewsContentServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.DeleteNewsContentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteNewsContentServlet</servlet-name>
+  <url-pattern>/deleteNewsContentServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>getNewsContentServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.GetNewsContentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getNewsContentServlet</servlet-name>
+  <url-pattern>/getNewsContentServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>loadNewsContentServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.LoadNewsContentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loadNewsContentServlet</servlet-name>
+  <url-pattern>/loadNewsContentServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>showNewsContentByN_idServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.ShowNewsContentByN_idServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>showNewsContentByN_idServlet</servlet-name>
+  <url-pattern>/showNewsContentByN_idServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>showMoreNewsCommentServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.ShowMoreNewsCommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>showMoreNewsCommentServlet</servlet-name>
+  <url-pattern>/showMoreNewsCommentServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>addACommentServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.AddACommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addACommentServlet</servlet-name>
+  <url-pattern>/addACommentServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>updateNewsServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.UpdateNewsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateNewsServlet</servlet-name>
+  <url-pattern>/updateNewsServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>deleteTheSelectedNewsContentServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.DeleteTheSelectedNewsContentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteTheSelectedNewsContentServlet</servlet-name>
+  <url-pattern>/deleteTheSelectedNewsContentServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>startUsingServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.StartUsingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>startUsingServlet</servlet-name>
+  <url-pattern>/startUsingServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>stopUsingServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.StopUsingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>stopUsingServlet</servlet-name>
+  <url-pattern>/stopUsingServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>deleteUserServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.DeleteUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteUserServlet</servlet-name>
+  <url-pattern>/deleteUserServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>addUserServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.AddUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addUserServlet</servlet-name>
+  <url-pattern>/addUserServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>newPasswordServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.NewPasswordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>newPasswordServlet</servlet-name>
+  <url-pattern>/newPasswordServlet</url-pattern>
+</servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>returnUserEditPageServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.returnUserEditPageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>returnUserEditPageServlet</servlet-name>
+  <url-pattern>/returnUserEditPageServlet</url-pattern>
+</servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>editNewsUserServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.editNewsUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>editNewsUserServlet</servlet-name>
+  <url-pattern>/editNewsUserServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <servlet-name>deleteSelectUserServlet</servlet-name>
+    <servlet-class>top.newsWeb.web.servlet.DeleteSelectUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteSelectUserServlet</servlet-name>
+  <url-pattern>/deleteSelectUserServlet</url-pattern>
+</servlet-mapping>
+
+
+
+</web-app>
+
+
+

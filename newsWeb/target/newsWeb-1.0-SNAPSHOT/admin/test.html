@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>table模块快速使用</title>
+    <link rel="stylesheet" href="lib/layui/css/layui.css" media="all">
+</head>
+<body>
+
+<table id="demo" lay-filter="test"></table>
+
+<script src="lib/layui/layui.js"></script>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+
+        //第一个实例
+        table.render({
+            elem: '#demo'
+            ,height: 312
+            ,limit:10
+            ,url:'/newsWeb/findNewsContentServlet?url=findNewsContentServlet'//数据接口
+            ,page: true //开启分页
+            ,cols: [[ //表头
+                {field: 'n_id', title: '新闻ID', width:80, sort: true, fixed: 'left'}
+                ,{field: 'username', title: '作者', width:80}
+                ,{field: 'head', title: '新闻标题', width:80}
+                ,{field: 'content', title: '新闻内容', width:80, sort: true}
+                ,{field: 'like', title: '点赞', width:80}
+                ,{field: 'page_view', title: '浏览量', width: 177}
+                ,{field: 'add_time', title: '添加时间', width: 80, sort: true}
+                ,{field: 'collect', title: '收藏', width: 80, sort: true}
+
+            ]]
+        });
+
+    });
+</script>
+</body>
+</html>
